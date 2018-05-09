@@ -6,21 +6,21 @@ package com.example.android.quakereport;
 
 public class Earthquake {
 
-    //private double mMagnitude;
-    private String mMagnitude;
+    private double mMagnitude;
     private String mCity;
     private long mTimeInMilliseconds;
+    private String mUrl;
 
     // Create a new Earthquake object.
-    public Earthquake(String magnitude, String city, long timeInMilliseconds) {
+    public Earthquake(double magnitude, String city, long timeInMilliseconds, String url) {
         mMagnitude = magnitude;
         mCity = city;
         mTimeInMilliseconds = timeInMilliseconds;
+        mUrl = url;
     }
 
     // Get the magnitude of the earthquake.
-    //public double getMagnitude() {
-    public String getMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
@@ -34,12 +34,18 @@ public class Earthquake {
         return mTimeInMilliseconds;
     }
 
+    // Get the url of the earthquake.
+    public String getmUrl() {
+        return mUrl;
+    }
+
     @Override
     public String toString() {
         return "Earthquake{" +
-                "Magnitude=" + mMagnitude +
-                ", City='" + mCity + '\'' +
-                ", DateTime=" + mTimeInMilliseconds +
+                "mMagnitude=" + mMagnitude +
+                ", mCity='" + mCity + '\'' +
+                ", mTimeInMilliseconds=" + mTimeInMilliseconds +
+                ", mUrl='" + mUrl + '\'' +
                 '}';
     }
 }

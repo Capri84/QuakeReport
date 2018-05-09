@@ -54,10 +54,11 @@ public final class QueryUtils {
             for (int i = 0; i < features.length(); i++) {
                 JSONObject featuresJSONObject = features.getJSONObject(i);
                 JSONObject propertiesJSONObject = featuresJSONObject.getJSONObject("properties");
-                String mag = propertiesJSONObject.getString("mag");
+                double mag = propertiesJSONObject.getDouble("mag");
                 String place = propertiesJSONObject.getString("place");
                 long time = propertiesJSONObject.getLong("time");
-                earthquakes.add(new Earthquake(mag, place, time));
+                String url = propertiesJSONObject.getString("url");
+                earthquakes.add(new Earthquake(mag, place, time, url));
             }
         } catch (JSONException e) {
             // If an error is thrown when executing any of the above statements in the "try" block,
