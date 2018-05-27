@@ -35,7 +35,7 @@ public class Earthquake {
     }
 
     // Get the url of the earthquake.
-    public String getmUrl() {
+    public String getUrl() {
         return mUrl;
     }
 

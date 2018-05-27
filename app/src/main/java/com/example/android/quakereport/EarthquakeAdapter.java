@@ -71,7 +71,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake>{
 
         // Create a new Date object from the time in milliseconds of the earthquake
         Date dateObject = new Date(currentQuake.getTimeInMilliseconds());
-        SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM DD, yyyy");
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM dd, yyyy");
         String dateToDisplay = dateFormatter.format(dateObject);
 
         TextView date = (TextView) listItemView.findViewById(R.id.date);
